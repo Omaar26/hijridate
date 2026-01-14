@@ -1,11 +1,11 @@
 {
-	"id": "sample-plugin",
-	"name": "Sample Plugin",
-	"version": "1.0.0",
+	"id": "hijridate",
+	"name": "Hijri Date",
+	"version": "0.0.1",
 	"minAppVersion": "0.15.0",
-	"description": "Demonstrates some of the capabilities of the Obsidian API.",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": " Used to insert the current islamic hijri date into the editor just like the comnmand tmeplate insert date",
+	"author": "Omar Hosam-eldeen",
+	"authorUrl": "https://github.com/Omaar26",
+	"fundingUrl": "https://github.com/Omaar26/hijridate",
 	"isDesktopOnly": false
 }
