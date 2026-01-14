@@ -17,9 +17,6 @@ export default class hijridatePlugin extends Plugin {
 			new Notice('dice clicked');
 		});
 
-		// This adds a status bar item to the bottom of the app. Does not work on mobile apps.
-		const statusBarItemEl = this.addStatusBarItem();
-		statusBarItemEl.setText('Status bar text');
 
 		// This adds a simple command that can be triggered anywhere
 		this.addCommand({
@@ -33,11 +30,35 @@ export default class hijridatePlugin extends Plugin {
 		this.addCommand({
 			id: 'insert-hdate',
 			name: 'Inset Hijri Date',
+			// callback: () => this.writeHijriDate();   
 			editorCallback: (editor: Editor, view: MarkdownView) => {
-				editor.replaceSelection('hijri date should be here');
+				editor.replaceSelection('hijri date should be here, for now we want geo date');
+				//return Date.UTC; 
 			}
 		});
 	
+// 		writeHijriDate() {
+//     const view = this.app.workspace.getActiveViewOfType(MarkdownView);
+
+//     if (view) {
+//       // Do work here
+//       const editor = view.sourceMode.cmEditor;
+
+//       const newString = this.computeHijriDate();
+//       editor.replaceSelection(newString, "end");
+//     }
+//   }
+
+
+//   computeHijriDate(): string {
+//     const date = new Date();
+//     return (
+//       date.getTime() / 86400000 -
+//       date.getTimezoneOffset() / 1440 +
+//       (2440587.5 - this.setting.epochCorrection)
+//     ).toFixed(this.setting.decimalPlaces);
+//   }
+// }
 
 		// This adds a settings tab so the user can configure various aspects of the plugin
 		this.addSettingTab(new SampleSettingTab(this.app, this));
