@@ -12,7 +12,7 @@ export default class hijridatePlugin extends Plugin {
 		await this.loadSettings();
 
 		// This creates an icon in the left ribbon.
-		this.addRibbonIcon('dice', 'samoaliko', (evt: MouseEvent) => {
+		this.addRibbonIcon('calendar-with-checkmark', 'Insert todays hijri date', (evt: MouseEvent) => {
 			// Called when the user clicks the icon.
 			new Notice('dice clicked');
 		});
